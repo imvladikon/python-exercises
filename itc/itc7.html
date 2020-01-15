@@ -1,0 +1,193 @@
+<div class="layout-pane__container">
+    <div class="coding-question__left-pane">
+        <section>
+            <h1 class="question-view__title">7. Customers Ordering</h1>
+        </section>
+        <section class="question-view__instruction">
+            <div class="candidate-rich-text">
+                <div id="g4mmmt37alh-instruction">
+                    <p>A company maintains the data of its customers in the&nbsp;<em>CUSTOMER&nbsp;</em>table. Write a
+                        query to print the <em>ID</em>s and the <em>NAME</em>s of the customers, sorted by
+                        <em>CUSTOMER.NAME</em>&nbsp;in descending order. If two or more customers have the same
+                        <em>CUSTOMER.NAME</em>, then sort these&nbsp;by&nbsp;<em>CUSTOMER.ID </em>in ascending order.
+                    </p>
+
+                    <p>&nbsp;</p>
+
+                    <p style="font-weight:bold;" title="The schemas of any data tables needed to solve this challenge.">
+                        Input Format</p>
+
+                    <div style="display: inline-block;">
+                        <table style="float:left;margin:4px;">
+                            <tbody>
+                                <tr>
+                                    <th colspan="100">CUSTOMER</th>
+                                </tr>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Type</th>
+                                    <th>Description</th>
+                                </tr>
+                                <tr>
+                                    <td align="center" style="font-family:monospace;white-space:nowrap;">ID</td>
+                                    <td align="center" style="font-family:monospace;white-space:nowrap;">Integer</td>
+                                    <td>A customer ID in the inclusive range <em>[1, 1000]</em>. This is the primary
+                                        key.</td>
+                                </tr>
+                                <tr>
+                                    <td align="center" style="font-family:monospace;white-space:nowrap;">NAME</td>
+                                    <td align="center" style="font-family:monospace;white-space:nowrap;">String</td>
+                                    <td>A customer name. This field contains between <em>1</em> and <em>100</em>
+                                        characters (inclusive).</td>
+                                </tr>
+                                <tr>
+                                    <td align="center" style="font-family:monospace;white-space:nowrap;">COUNTRY</td>
+                                    <td align="center" style="font-family:monospace;white-space:nowrap;">String</td>
+                                    <td>The country of the customer.</td>
+                                </tr>
+                                <tr>
+                                    <td align="center" style="font-family:monospace;white-space:nowrap;">CREDITS</td>
+                                    <td align="center" style="font-family:monospace;white-space:nowrap;">Integer</td>
+                                    <td>The credit limit of the customer.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p style="clear:both;">&nbsp;</p>
+
+                    <p style="font-weight:bold;" title="The desired result of the query.">Output Format</p>
+
+                    <p>The result should print the ids and the names of the customers, sorted by <em>CUSTOMER.NAME</em>
+                        in descending order. If two or more customers have the same <em>CUSTOMER.NAME</em>, then sort
+                        these by&nbsp;<em>CUSTOMER.ID </em>in ascending order.</p>
+
+                    <pre>CUSTOMER.ID CUSTOMER.NAME</pre>
+
+                    <p>&nbsp;</p>
+
+                    <p style="clear:both;"><strong>Sample Input</strong></p>
+
+                    <div style="width:100%;display:inline-block;">
+                        <table style="float:left;margin:4px;width:48%;">
+                            <tbody>
+                                <tr>
+                                    <th colspan="100">CUSTOMER</th>
+                                </tr>
+                                <tr>
+                                    <th style="font-family:monospace;white-space:nowrap;">ID</th>
+                                    <th style="font-family:monospace;white-space:nowrap;">NAME</th>
+                                    <th style="font-family:monospace;white-space:nowrap;">COUNTRY</th>
+                                    <th style="font-family:monospace;white-space:nowrap;">CREDITS</th>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">1</td>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">Frances
+                                        White</td>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">USA</td>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">200350</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">2</td>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">Carolyn
+                                        Bradley</td>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">UK</td>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">15354</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">3</td>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">Annie
+                                        Fernandez</td>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">France</td>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">359200</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">4</td>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">Ruth Hanson
+                                    </td>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">Albania</td>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">1060</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">5</td>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">Paula Fuller
+                                    </td>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">USA</td>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">14789</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">6</td>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">Bonnie
+                                        Johnston</td>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">China</td>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">100243</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">7</td>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">Ruth
+                                        Gutierrez</td>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">USA</td>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">998999</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">8</td>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">Ernest
+                                        Thomas</td>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">Canada</td>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">500500</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">9</td>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">Joe Garza
+                                    </td>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">UK</td>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">18782</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">10</td>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">Anne Harris
+                                    </td>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">USA</td>
+                                    <td style="text-align:center;font-family:monospace;white-space:nowrap;">158367</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>&nbsp;</p>
+
+                    <p style="font-weight:bold;">Sample Output</p>
+
+                    <pre>4 Ruth Hanson
+7 Ruth Gutierrez
+5 Paula Fuller
+9 Joe Garza
+1 Frances White
+8 Ernest Thomas
+2 Carolyn Bradley
+6 Bonnie Johnston
+3 Annie Fernandez
+10 Anne Harris
+</pre>
+
+                    <p>&nbsp;</p>
+
+                    <p style="font-weight:bold;">Explanation</p>
+
+                    <p>According to lexicographical arrangement,&nbsp;</p>
+
+                    <p>&nbsp;</p>
+
+                    <p><code
+                            style="color:black;">Ruth Hanson &gt; Ruth Gutierrez &gt; Paula Fuller &gt; Joe Garza &gt; Frances White &gt; Ernest Thomas &gt; Carolyn Bradley &gt; Bonnie Johnston &gt; Annie Fernandez &gt; Anne Harris</code>
+                    </p>
+
+                    <p>&nbsp;</p>
+
+                    <p>There are no duplicate names, so all records are in descending alphabetical <em>NAME</em> order.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
